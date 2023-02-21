@@ -1,0 +1,63 @@
+@use 'src/assets/styles/scss' as *;
+
+.modal {
+  @include flex(center, center);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  opacity: 0;
+  visibility: hidden;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__content {
+    padding: 2rem;
+    background-color: var(--bg-opacity);
+    width: 80%;
+    opacity: 0;
+    transform: translateY(-250px);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    position: relative;
+
+    @include tablet {
+      width: 80%;
+    }
+
+    &__close {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      cursor: pointer;
+      svg {
+        width: 1.5rem;
+        background: red;
+        path {
+          fill: #ffffff;
+        }
+      }
+
+      &:hover {
+        svg {
+          width: 1.5rem;
+          background: rgb(195, 2, 2);
+          path {
+            fill: #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  &.active &__content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

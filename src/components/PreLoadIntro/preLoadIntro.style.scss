@@ -1,0 +1,95 @@
+@use '/src/assets/styles/scss' as *;
+
+.load-intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999999;
+  overflow: hidden;
+  @include flex(center, center);
+  > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: 600;
+    transform-origin: center center;
+  }
+  &__1 {
+    animation: hiddenElement 0.01s 1s forwards;
+    overflow: hidden;
+    > div {
+      width: 40vw;
+      background: #505050;
+      height: 2px;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0%;
+        background: #fff;
+        animation: load1 1s forwards;
+      }
+    }
+  }
+  @keyframes load1 {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  &__3,
+  &__4,
+  &__5,
+  &__6 {
+    width: 100%;
+    text-align: center;
+  }
+
+  &__3 {
+    opacity: 0;
+    animation: load2 1.3s 1.2s forwards;
+  }
+  &__4 {
+    opacity: 0;
+    animation: load2 1.3s 2.7s forwards;
+  }
+  &__5 {
+    opacity: 0;
+    animation: load2 1.3s 4.2s forwards;
+  }
+  &__6 {
+    opacity: 0;
+    animation: load2 1.3s 5.7s forwards;
+  }
+  @keyframes load2 {
+    0% {
+      opacity: 0;
+    }
+    20%,
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1.1);
+      opacity: 0;
+    }
+  }
+}
+@keyframes hiddenElement {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

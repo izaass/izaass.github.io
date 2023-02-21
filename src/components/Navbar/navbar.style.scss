@@ -1,0 +1,54 @@
+@use 'src/assets/styles/scss' as *;
+
+.navbar {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 100;
+  overflow: hidden;
+  border-radius: 30px;
+
+  ul {
+    @include flex(center, center);
+
+    position: relative;
+
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    background: rgba(88, 88, 88, 0.4);
+    padding: 0 0.5rem;
+    li {
+      padding: 0.3rem 0.5rem;
+      @include mobile {
+        padding: 0.5rem 0.7rem;
+      }
+      &.active {
+        a {
+          article {
+            background: rgba(40, 178, 253, 0.571);
+          }
+        }
+      }
+      a {
+        article {
+          background: none;
+          width: 2.3rem;
+          height: 2.3rem;
+          padding: 0.6rem;
+          background: rgba(88, 88, 88, 0.4);
+          border-radius: 50%;
+          @include flex(center, center);
+          @include mobile {
+            width: 3.7rem;
+            height: 3.7rem;
+          }
+          svg {
+            width: 100%;
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+}

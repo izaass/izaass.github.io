@@ -1,0 +1,186 @@
+@use 'src/assets/styles/scss' as *;
+
+.knowledge {
+  padding: 0 3rem;
+  @include flex(center, space-between);
+  max-width: $max-container;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  @include mobile {
+    margin-top: 7rem;
+    padding: 0 1.5rem;
+  }
+  &__left {
+    width: 65%;
+    padding-right: 1rem;
+    position: relative;
+    z-index: 2;
+    @include tablet {
+      width: 100%;
+    }
+    &--title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--title-color);
+    }
+    &--content {
+      width: 100%;
+      @include flex(center, flex-start);
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      @include tablet {
+        justify-content: space-between;
+        gap: none;
+      }
+      @include mobile {
+        justify-content: flex-start;
+        gap: 5%;
+      }
+
+      &_item {
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        font-weight: 700;
+        border: 1px solid var(--main-color);
+        @include flex(center, center);
+        border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+        @media only screen and (min-width: 1470px) {
+          width: 12vw;
+          height: 12vw;
+        }
+        @include tablet {
+          width: 19vw;
+          height: 19vw;
+          background: var(--bg-opacity);
+        }
+        @include mobile {
+          margin-bottom: 1.5rem;
+          width: 30%;
+          height: 25vw;
+        }
+        &:nth-child(1) {
+          animation: bubble 5s linear infinite;
+          border-color: rgb(255, 132, 38);
+        }
+        &:nth-child(2) {
+          animation: bubble 7s linear infinite;
+          border-color: rgb(216, 0, 176);
+        }
+        &:nth-child(3) {
+          animation: bubble 4s linear infinite;
+          border-color: rgb(255, 185, 33);
+        }
+        &:nth-child(4) {
+          animation: bubble 6s linear infinite;
+          border-color: rgb(165, 0, 198);
+        }
+        &:nth-child(5) {
+          animation: bubble 8s linear infinite;
+          border-color: rgb(106, 227, 0);
+        }
+        &:nth-child(6) {
+          animation: bubble 9s linear infinite;
+          border-color: rgb(0, 112, 146);
+        }
+        &:nth-child(7) {
+          animation: bubble 5.5s linear infinite;
+          border-color: rgb(222, 254, 57);
+        }
+        &:nth-child(8) {
+          animation: bubble 4.5s linear infinite;
+          border-color: rgb(0, 217, 255);
+        }
+        &:hover {
+          border-color: var(--main-color);
+        }
+        @keyframes bubble {
+          0%,
+          100% {
+            border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+          }
+          33% {
+            border-radius: 72% 28% 48% 48% / 28% 28% 72% 72%;
+          }
+          66% {
+            border-radius: 100% 56% 56% 100% / 100% 100% 56% 56%;
+          }
+        }
+      }
+    }
+  }
+  &__right {
+    width: 35%;
+    transform: perspective(2000px) translateZ(-100px);
+    @include tablet {
+      position: absolute;
+      z-index: 1;
+      top: -10%;
+      right: 0;
+      width: 45%;
+    }
+    @include mobile {
+      width: 60%;
+      right: -10vw;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.knowledge__left--title {
+  transition: all 0.5s ease;
+}
+.knowledge__left--content_item {
+  &:nth-child(1) {
+    transition: all 0.5s ease;
+  }
+  &:nth-child(2) {
+    transition: all 0.5s 0.2s ease;
+  }
+  &:nth-child(3) {
+    transition: all 0.5s 0.4s ease;
+  }
+  &:nth-child(4) {
+    transition: all 0.5s 0.6s ease;
+  }
+  &:nth-child(5) {
+    transition: all 0.5s 0.8s ease;
+  }
+  &:nth-child(6) {
+    transition: all 0.5s 1s ease;
+  }
+  &:nth-child(7) {
+    transition: all 0.5s 1.2s ease;
+  }
+  &:nth-child(8) {
+    transition: all 0.5s 1.4s ease;
+  }
+  &:nth-child(9) {
+    transition: all 0.5s 1.6s ease;
+  }
+}
+
+.knowledge__right {
+  img {
+    transition: all 1s 0.3s ease;
+  }
+}
+.hidden.knowledge {
+  .knowledge__left--title,
+  .knowledge__left--content_item {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  .knowledge__right {
+    img {
+      transform: translate(-200px, 100px) scale(0.5);
+      opacity: 0;
+    }
+  }
+}

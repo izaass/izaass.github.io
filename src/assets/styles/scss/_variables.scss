@@ -1,0 +1,35 @@
+:root {
+  --body-image-bg: url('../../images/background-14.webp');
+  --body-bg: rgba(1, 1, 1, 1);
+  --theme-color: #f9fafb;
+  --dropdown-bg: #21242d;
+  --main-color: rgba(255, 255, 255, 1);
+  --title-color: rgb(98, 255, 252);
+  --bg-opacity: rgba(60, 60, 60, 0.4);
+  --link-color: rgb(126, 175, 255);
+
+  --boder-color: rgba(222, 222, 222, 0.684);
+  --boder-hover-color: rgb(98, 255, 252);
+}
+
+.light-mode {
+  --body-image-bg: url('../../images/background-1.webp');
+  --body-bg: rgba(245, 245, 245, 1);
+  --theme-color: #3c3a3a;
+  --dropdown-bg: #f7f7f7;
+  --main-color: rgb(21, 1, 12);
+  --title-color: rgb(80, 0, 83);
+  --bg-opacity: rgba(151, 201, 255, 0.4);
+  --link-color: rgb(19, 109, 255);
+
+  --boder-color: rgb(91, 91, 91);
+}
+
+$mobile-width: 720px;
+$tablet-width: 900px;
+$lap-width: 1024px;
+$max-width: 1500px;
+
+$max-container: 1500px;
+
+$font-family: 'Montserrat', sans-serif;

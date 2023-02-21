@@ -1,0 +1,136 @@
+@use 'src/assets/styles/scss' as *;
+#header-nav {
+  @include lap {
+    @include flex(center, center);
+    height: 100vh;
+  }
+}
+.header {
+  position: relative;
+  width: 100%;
+  max-width: $max-container;
+  // height: 100vh;
+  margin: auto;
+  padding: 0 3rem;
+  @include flex(center, space-between);
+  @include lap {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__user-icon {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    @include lap {
+      display: none;
+    }
+    img {
+      width: 200px;
+    }
+  }
+  &__left {
+    position: relative;
+    z-index: 1;
+    &--content {
+      text-align: center;
+      width: 100%;
+      text-align: ce;
+
+      &--title {
+        line-height: 4rem;
+        color: var(--title-color);
+        font-size: 4.5rem;
+        font-weight: 900;
+        white-space: nowrap;
+
+        @include mobile {
+          font-size: 3rem;
+        }
+      }
+      > article {
+        color: var(--main-color);
+        font-size: 3rem;
+        font-weight: 600;
+        @include mobile {
+          font-size: 2rem;
+        }
+      }
+      &--button {
+        margin-top: 1rem;
+        @include flex(center, center);
+        width: 100%;
+        .btn {
+          padding: 0.7rem 0;
+          text-align: center;
+          width: 200px;
+          border-radius: 20px;
+          font-weight: 600;
+          font-size: 1.2rem;
+          line-height: 1.2rem;
+          &:active {
+            transform: translateY(1px);
+          }
+          @include mobile {
+            width: 30vw;
+          }
+          &__download {
+            border: 2px solid var(--title-color);
+            color: var(--title-color);
+            box-sizing: border-box;
+          }
+          &__let-talk {
+            margin-left: 1rem;
+            background: none;
+            border: 2px solid var(--main-color);
+            color: var(--main-color);
+          }
+        }
+      }
+    }
+  }
+  &__right {
+    position: relative;
+    width: 35%;
+    height: 100vh;
+    overflow: hidden;
+    @include flex(center, center);
+    @include lap {
+      height: auto;
+      display: block;
+      margin: auto;
+      margin-top: 3rem;
+      width: auto;
+    }
+    &--image {
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #ffffff;
+      width: 30vw;
+      height: 40vw;
+      background: #000;
+      border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+      // border: 1px solid #ffffff;
+      background: url('../../assets/images/avatar.jpg');
+      background-size: cover;
+      background-position: center;
+      animation: bubble 6s linear infinite;
+      @include lap {
+        width: 45vw;
+        height: 60vw;
+      }
+      @keyframes bubble {
+        0%,
+        100% {
+          border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+        }
+        33% {
+          border-radius: 72% 28% 48% 48% / 28% 28% 72% 72%;
+        }
+        66% {
+          border-radius: 100% 56% 56% 100% / 100% 100% 56% 56%;
+        }
+      }
+    }
+  }
+}

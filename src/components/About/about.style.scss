@@ -1,0 +1,98 @@
+@use 'src/assets/styles/scss' as *;
+.about {
+  width: 100%;
+  @include flex(stretch, space-between);
+  padding: 0 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  // overflow: hidden;
+  max-width: $max-container;
+  @include mobile {
+    padding: 0 1.5rem;
+  }
+
+  &__left {
+    width: 40%;
+    @include mobile {
+      width: 15%;
+    }
+    &--image {
+      width: 55vw;
+      transform: translate(-17vw, -15vh);
+      @include max {
+        transform: translate(-22vw, -15vh);
+      }
+      @include mobile {
+        width: 70vw;
+        transform: translate(-20vw, -10vh);
+      }
+      img {
+        transform: perspective(2000px) rotate(0deg);
+        animation: rotateImg 30s infinite ease;
+        width: 100%;
+      }
+      @keyframes rotateImg {
+        0% {
+          transform: perspective(2000px) rotate(0deg);
+        }
+        60% {
+          transform: perspective(2000px) rotate(-180);
+        }
+        100% {
+          transform: perspective(2000px) rotate(-360deg);
+        }
+      }
+    }
+  }
+  &__right {
+    width: 55%;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    position: relative;
+    z-index: 1;
+    @include mobile {
+      width: 85%;
+      padding: 0;
+      > section {
+        width: 100%;
+        background: var(--bg-opacity);
+        padding: 1rem 1.5rem;
+        box-shadow: 0 0 20px 4px rgba(85, 85, 85, 0.849);
+        border-radius: 10px;
+      }
+    }
+    &--title {
+      color: var(--title-color);
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    &--content {
+      text-align: justify;
+      color: var(--main-color);
+      > div {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}
+
+.about__right--title {
+  transition: all 0.5s ease;
+}
+.about__right--content > div {
+  &:nth-child(1) {
+    transition: all 0.5s 0.3s ease;
+  }
+  &:nth-child(2) {
+    transition: all 0.5s 0.5s ease;
+  }
+}
+.hidden.about {
+  .about__right--title,
+  .about__right--content > div {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+}
