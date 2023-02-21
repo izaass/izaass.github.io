@@ -1,6 +1,6 @@
 import React from 'react'
 import './header.style.scss'
-import CV from 'src/assets/images/TRAN-VAN-HUNG-FRESHER-FRONT-END.pdf'
+import CV from 'src/assets/images/VO HOANG PHI HUNG.pdf'
 import user from 'src/assets/images/user.png'
 
 function Header() {
@@ -14,7 +14,9 @@ function Header() {
       </div>
       <div className="header__left">
         <div className="header__left--content">
-          <div className="header__left--content--title">Hello, I'm Phi Hung</div>
+          <div className="header__left--content--title">
+            Hello, I'm Phi Hung
+          </div>
           <article className="header__left--content--fe">
             FullStack Developer
           </article>
