@@ -1,28 +1,29 @@
 {
   "files": {
-    "main.css": "/izaass.github.io/static/css/main.9e25d260.css",
-    "main.js": "/izaass.github.io/static/js/main.a0727992.js",
-    "static/js/453.be81eee1.chunk.js": "/izaass.github.io/static/js/453.be81eee1.chunk.js",
-    "static/media/video_mockup1.gif": "/izaass.github.io/static/media/video_mockup1.94b3d2d940e4a8a950fb.gif",
-    "static/media/video_mockup2.gif": "/izaass.github.io/static/media/video_mockup2.25919dbae14291ff3add.gif",
-    "static/media/video_mockup3.gif": "/izaass.github.io/static/media/video_mockup3.01bd8e811bdf7689d0c9.gif",
-    "static/media/mock06.png": "/izaass.github.io/static/media/mock06.5c7c6d64e169a438b743.png",
-    "static/media/mock07.png": "/izaass.github.io/static/media/mock07.3052a1d26afa0ecd2875.png",
-    "static/media/bg-light.png": "/izaass.github.io/static/media/bg-light.bac0efb485244a522981.png",
-    "static/media/CV_VO_HOANG_PHI_HUNG_en.pdf": "/izaass.github.io/static/media/CV_VO_HOANG_PHI_HUNG_en.2e3965defe01c23f772c.pdf",
-    "static/media/bg-dark.png": "/izaass.github.io/static/media/bg-dark.f420c6b8458af72de935.png",
-    "static/media/mock08.png": "/izaass.github.io/static/media/mock08.90da20635544c42c6d37.png",
-    "static/media/mock05.png": "/izaass.github.io/static/media/mock05.1810aa9c7c2e6f87544d.png",
-    "static/media/mock09.png": "/izaass.github.io/static/media/mock09.cbf54ce1f6326723c2c1.png",
-    "static/media/mock01.png": "/izaass.github.io/static/media/mock01.7efb7c9665af5aa8010b.png",
-    "static/media/mock10.png": "/izaass.github.io/static/media/mock10.85e2ffe5b9a90efbfa05.png",
-    "index.html": "/izaass.github.io/index.html",
-    "main.9e25d260.css.map": "/izaass.github.io/static/css/main.9e25d260.css.map",
-    "main.a0727992.js.map": "/izaass.github.io/static/js/main.a0727992.js.map",
-    "453.be81eee1.chunk.js.map": "/izaass.github.io/static/js/453.be81eee1.chunk.js.map"
+    "main.css": "/static/css/main.0a1d8219.css",
+    "main.js": "/static/js/main.b51513d9.js",
+    "static/js/453.be81eee1.chunk.js": "/static/js/453.be81eee1.chunk.js",
+    "static/media/video_mockup1.gif": "/static/media/video_mockup1.94b3d2d940e4a8a950fb.gif",
+    "static/media/video_mockup2.gif": "/static/media/video_mockup2.25919dbae14291ff3add.gif",
+    "static/media/video_mockup3.gif": "/static/media/video_mockup3.01bd8e811bdf7689d0c9.gif",
+    "static/media/mock06.png": "/static/media/mock06.5c7c6d64e169a438b743.png",
+    "static/media/mock07.png": "/static/media/mock07.3052a1d26afa0ecd2875.png",
+    "static/media/bg-light.png": "/static/media/bg-light.bac0efb485244a522981.png",
+    "static/media/CV_VO_HOANG_PHI_HUNG_en.pdf": "/static/media/CV_VO_HOANG_PHI_HUNG_en.2e3965defe01c23f772c.pdf",
+    "static/media/bg-dark.png": "/static/media/bg-dark.f420c6b8458af72de935.png",
+    "static/media/mock08.png": "/static/media/mock08.90da20635544c42c6d37.png",
+    "static/media/mock05.png": "/static/media/mock05.1810aa9c7c2e6f87544d.png",
+    "static/media/mock09.png": "/static/media/mock09.cbf54ce1f6326723c2c1.png",
+    "static/media/mock01.png": "/static/media/mock01.7efb7c9665af5aa8010b.png",
+    "static/media/mock10.png": "/static/media/mock10.85e2ffe5b9a90efbfa05.png",
+    "static/media/sparkle_yellow.gif": "/static/media/sparkle_yellow.af6d9ef3d3ede8f9f697.gif",
+    "index.html": "/index.html",
+    "main.0a1d8219.css.map": "/static/css/main.0a1d8219.css.map",
+    "main.b51513d9.js.map": "/static/js/main.b51513d9.js.map",
+    "453.be81eee1.chunk.js.map": "/static/js/453.be81eee1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e25d260.css",
-    "static/js/main.a0727992.js"
+    "static/css/main.0a1d8219.css",
+    "static/js/main.b51513d9.js"
   ]
 }
