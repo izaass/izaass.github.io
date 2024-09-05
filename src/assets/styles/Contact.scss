@@ -1,0 +1,37 @@
+// Contact.scss
+#contact {
+  .contact_wrapper svg {
+    font-size: 1em;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  .items-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact_wrapper {
+    text-align: center;
+
+    svg {
+      font-size: 1em; // Font size for SVG icons
+      vertical-align: middle;
+      margin-right: 5px; // Space between icons
+      transition: transform 0.2s ease-in-out, fill 0.2s ease-in-out; // Smooth transitions
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 10px; // Spacing between icons
+      transition: transform 0.2s ease; // Smooth scale transition
+    }
+
+    a:hover {
+      transform: scale(2); // Slightly enlarge the icon
+    }
+  }
+}

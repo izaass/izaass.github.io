@@ -1,0 +1,66 @@
+// Navigation.scss
+
+.navbar-fixed-top {
+  background-color: #333; // Default background color for the navbar
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; // Smooth transition for background and shadow
+  box-shadow: none;
+}
+
+.navbar-fixed-top.scrolled {
+  background-color: #222; // Darker background color when scrolled
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); // Add shadow when scrolled
+}
+
+.navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px; // Adjust padding as needed
+}
+
+.navigation-bar .MuiIconButton-root,
+.navigation-bar .MuiButton-root {
+  transition: color 0.3s ease; // Smooth color transition for buttons
+}
+
+.navigation-bar .MuiIconButton-root:hover,
+.navigation-bar .MuiButton-root:hover {
+  color: #eab41e; // Change color on hover
+}
+
+.navigation-bar .active {
+  font-weight: bold; // Highlight the active button
+  color: #eab41e; // Active color
+}
+
+.navigation-bar-responsive {
+  padding: 16px; // Adjust padding as needed
+  .mobile-menu-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px; // Space below the menu title
+    svg {
+      margin-right: 8px; // Space between icon and text
+    }
+  }
+}
+
+.mobile-menu-top {
+  font-size: 1.5em; // Adjust font size for mobile menu title
+}
+
+.MuiDrawer-paper {
+  background-color: #333; // Background color for the drawer
+  color: #fff; // Text color for the drawer
+  transition: background-color 0.3s ease; // Smooth background color transition
+}
+
+.MuiDrawer-paper .MuiButton-root {
+  color: #fff; // Button color in the drawer
+  transition: color 0.3s ease; // Smooth color transition for drawer buttons
+}
+
+.MuiDrawer-paper .MuiButton-root:hover {
+  color: #eab41e; // Change color on hover
+}
